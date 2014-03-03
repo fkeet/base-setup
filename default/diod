@@ -1,0 +1,7 @@
+# Defaults for diod
+
+# Change to true to enable the server at startup.
+DIOD_ENABLE=false
+
+# Additional options that are passed to the Daemon.
+DAEMON_ARGS=""

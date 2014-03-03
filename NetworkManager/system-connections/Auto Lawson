@@ -1,0 +1,19 @@
+[connection]
+id=Auto Lawson
+uuid=15b0c9f0-5e15-4997-9769-9dddfb95e7cc
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=Lawson
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=none
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

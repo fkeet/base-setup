@@ -1,0 +1,1 @@
+/opt/adobe//Adobe/Reader9/Resource/Shell/acroread_tab

@@ -1,0 +1,15 @@
+[connection]
+id=Auto clear-guest
+uuid=ee216786-f96c-494b-bff6-a0d29caca570
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=clear-guest
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

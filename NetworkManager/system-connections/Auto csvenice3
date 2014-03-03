@@ -1,0 +1,21 @@
+[connection]
+id=Auto csvenice3
+uuid=e29ea9f2-104e-4889-9866-9f90b1e166c6
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=csvenice3
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=paal swaan toon knie
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

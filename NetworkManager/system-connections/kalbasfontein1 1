@@ -1,0 +1,22 @@
+[connection]
+id=kalbasfontein1 1
+uuid=c9a0af14-599f-4083-a1db-eae6dc1aba5b
+type=802-11-wireless
+timestamp=1387480693
+
+[802-11-wireless]
+ssid=kalbasfontein1
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+seen-bssids=64:66:B3:79:1E:9E;
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+psk=kalbasfontein
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

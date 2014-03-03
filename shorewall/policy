@@ -1,0 +1,5 @@
+fw net ACCEPT
+loc fw ACCEPT
+vm all ACCEPT
+all vm ACCEPT
+all all DROP

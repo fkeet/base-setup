@@ -1,0 +1,21 @@
+[connection]
+id=Auto kalbasfontein2
+uuid=34b766cf-4411-44da-8c74-74b8e671b3e2
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=kalbasfontein2
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+security=802-11-wireless-security
+
+[802-11-wireless-security]
+key-mgmt=wpa-psk
+auth-alg=open
+psk=kalbasfontein
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto

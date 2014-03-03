@@ -1,0 +1,15 @@
+[connection]
+id=kalbasfontein1 1
+uuid=86d98712-3df0-40f0-8800-19be80b628a0
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=kalbasfontein1
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

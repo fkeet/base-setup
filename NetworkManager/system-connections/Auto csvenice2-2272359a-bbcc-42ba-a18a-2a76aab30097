@@ -1,0 +1,15 @@
+[connection]
+id=Auto csvenice2
+uuid=2272359a-bbcc-42ba-a18a-2a76aab30097
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=csvenice2
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

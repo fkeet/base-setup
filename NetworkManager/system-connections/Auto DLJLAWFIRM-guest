@@ -1,0 +1,15 @@
+[connection]
+id=Auto DLJLAWFIRM-guest
+uuid=6faddd76-1722-4dc1-b993-28597d2ebb99
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=DLJLAWFIRM-guest
+mode=infrastructure
+mac-address=8C:70:5A:92:90:E8
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

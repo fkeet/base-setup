@@ -1,0 +1,4 @@
+net eth0
+net wlan0
+vm vboxnet0
+net tun0

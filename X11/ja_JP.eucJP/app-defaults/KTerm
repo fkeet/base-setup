@@ -1,0 +1,158 @@
+! $XConsortium: XTerm.ad,v 1.32 94/02/09 18:19:21 converse Exp $
+! $Id: KTerm.ad,v 1.4 1994/08/04 09:10:21 shibata Exp $
+KTerm.JoinSession:False
+*international:		True
+*SimpleMenu*BackingStore: NotUseful
+*SimpleMenu*menuLabel.fontSet:  -adobe-helvetica-bold-r-normal--*-120-*-*-*-*-iso8859-*,-misc-fixed-bold-r-normal-*-12,-misc-gothic-bold-r-normal-*-12,-misc-mincho-bold-r-normal-*-12,-misc-fixed-medium-r-normal-*-12
+*SimpleMenu*fontSet:		 -adobe-helvetica-medium-r-normal--*-120-*-*-*-*-iso8859-*,-misc-fixed-medium-r-normal-*-12,-misc-gothic-medium-r-normal-*-12,-misc-mincho-medium-r-normal-*-12
+*SimpleMenu*menuLabel.vertSpace: 	100
+*SimpleMenu*HorizontalMargins: 16
+*SimpleMenu*Sme.height:	16
+
+*SimpleMenu*Cursor: left_ptr
+*mainMenu.Label:		メインオプション
+*mainMenu*securekbd*Label:	安全なキーボード
+*mainMenu*allowsends*Label:	SendEventsを許可
+*mainMenu*logging*Label:	ファイルへログをとる
+*mainMenu*redraw*Label:		ウィンドゥ再描写
+*mainMenu*suspend*Label:	STOPシグナルを送る
+*mainMenu*continue*Label:	CONTシグナルを送る
+*mainMenu*interrupt*Label:	INTシグナルを送る
+*mainMenu*hangup*Label:		HUPシグナルを送る
+*mainMenu*terminate*Label:	TERMシグナルを送る
+*mainMenu*kill*Label:		KILLシグナルを送る
+*mainMenu*quit*Label:		終了
+
+*vtMenu.Label:			VTオプション
+*vtMenu*scrollbar*Label:	スクロールバーを表示
+*vtMenu*jumpscroll*Label:	ジャンプスクロールを有効
+*vtMenu*reversevideo*Label:	画面表示を反転
+*vtMenu*autowrap*Label:		自動Wraparoundを有効に
+*vtMenu*reversewrap*Label:	反転Wraparoundを有効に
+*vtMenu*autolinefeed*Label:	自動 行フィード
+*vtMenu*appcursor*Label:	アプリケーションカーソルキーを有効
+*vtMenu*appkeypad*Label:	アプリケーションキーパッドを有効
+*vtMenu*scrollkey*Label:	キー入力上の末端行へのスクロール
+*vtMenu*scrollttyoutput*Label:	端末出力上の末端行へのスクロール
+*vtMenu*allow132*Label:		80/132横幅スイッチを許可
+*vtMenu*cursesemul*Label:	Cursesエミュレーションを行なう
+*vtMenu*visualbell*Label:	ビジュアルベルを有効
+*vtMenu*marginbell*Label:	マージンベルを有効
+*vtMenu*altscreen*Label:	もう一つの画面を表示
+*vtMenu*softreset*Label:	ソフトリセットを行なう
+*vtMenu*hardreset*Label:	完全リセットを行なう
+*vtMenu*clearsavedlines*Label:	リセットおよび保存行をクリア
+*vtMenu*tekshow*Label:		Tekウィンドウを表示
+*vtMenu*tekmode*Label:		Tekモードへ変更
+*vtMenu*vthide*Label:		VTウィンドウを隠す
+*vtMenu*statusline*Label:	ステータス行を表示
+*vtMenu*reversestatus*Label:	ステータス表示を反転
+*vtMenu*eucmode*Label:		EUC漢字モード
+*vtMenu*sjismode*Label:		シフトJIS漢字モード
+*vtMenu*openim*Label:		IMを開く
+
+*fontMenu.Label:		VTフォント
+*fontMenu*fontdefault*Label:	標準
+*VT100*fontList:        -*-fixed-medium-r-normal--14-*,\
+                        -*-gothic-medium-r-normal--14-*,\
+                        -*-mincho-medium-r-normal--14-*
+!*VT100*boldFontList:   -*-fixed-bold-r-normal--14-*,\
+!                       -*-gothic-bold-r-normal--14-*,\
+!                       -*-mincho-bold-r-normal--14-*
+*fontMenu*font1*Label:		読み取り不可
+*VT100*fontList1:       -*-fixed-medium-r-normal--2-*,\
+                        -*-gothic-medium-r-normal--2-*,\
+                        -*-mincho-medium-r-normal--2-*
+*VT100*font1:           -misc-nil-medium-r-normal--2-*-misc-fontspecific
+*fontMenu*font2*Label:		最小
+*VT100*fontList2:       -*-fixed-medium-r-normal--10-*,\
+                        -*-gothic-medium-r-normal--10-*,\
+                        -*-mincho-medium-r-normal--10-*
+*fontMenu*font3*Label:		小さめ
+*VT100*fontList3:       -*-fixed-medium-r-normal--12-*,\
+                        -*-gothic-medium-r-normal--12-*,\
+                        -*-mincho-medium-r-normal--12-*
+*fontMenu*font4*Label:		中間
+*VT100*fontList4:       -*-fixed-medium-r-normal--16-*,\
+                        -*-gothic-medium-r-normal--16-*,\
+                        -*-mincho-medium-r-normal--16-*
+*fontMenu*font5*Label:		大きめ
+*VT100*fontList5:       -*-fixed-medium-r-normal--20-*,\
+                        -*-gothic-medium-r-normal--20-*,\
+                        -*-mincho-medium-r-normal--20-*
+*fontMenu*font6*Label:		最大
+*VT100*fontList6:       -*-fixed-medium-r-normal--24-*,\
+                        -*-gothic-medium-r-normal--24-*,\
+                        -*-mincho-medium-r-normal--24-*
+*fontMenu*fontescape*Label:	エスケープシーケンス
+*fontMenu*fontsel*Label:		セレクション
+!fontescape and fontsel overridden by application
+
+!*VT100*kanjiMode:		euc
+!*VT100*lineSpace:		0
+
+*VT100*textColor0:		Black
+*VT100*textColor1:		Red3
+*VT100*textColor2:		Green3
+*VT100*textColor3:		Yellow3
+*VT100*textColor4:		Blue3
+*VT100*textColor5:		Magenta3
+*VT100*textColor6:		Cyan3
+*VT100*textColor7:		Gray50
+
+KTerm*tekMenu.Label:		Tekオプション
+*tekMenu*tektextlarge*Label:	大きい文字
+*tekMenu*tektext2*Label:	文字サイズ#2
+*tekMenu*tektext3*Label:	文字サイズ#3
+*tekMenu*tektextsmall*Label:	小さい文字
+*tekMenu*tekpage*Label:		ページ
+*tekMenu*tekreset*Label:	リセット
+*tekMenu*tekcopy*Label:		コピー
+*tekMenu*vtshow*Label:		VTウィンドウを表示
+*tekMenu*vtmode*Label:		VTモードへ変更
+*tekMenu*tekhide*Label:		Tekウィンドウを隠す
+
+*tek4014*fontLarge: 9x15
+*tek4014*font2: 8x13
+*tek4014*font3: 6x13
+*tek4014*fontSmall: 6x10
+
+!*fontSet: 7x14,--mincho-*--14-*,-*--14-*
+
+!*beNiceToColormap:		False
+!*ScrollBar: true
+!*Scrollbar*Width: 16
+!*SimpleMenu*vertSpace: 0
+
+! for kinput2
+!*allowSendEvents: true
+
+! kterm use XMODIFIERS environment for XIM
+!*VT100*translations: #override \
+!  Shift<Key>space: open-im(XMODIFIERS) \n\
+*VT100*translations: #override \
+Shift<Btn4Down>,<Btn4Up>:scroll-back(1,line)\n\
+Shift<Btn5Down>,<Btn5Up>:scroll-forw(1,line)\n\
+Ctrl<Btn4Down>,<Btn4Up>:scroll-back(1,page)\n\
+Ctrl<Btn5Down>,<Btn5Up>:scroll-forw(1,page)\n\
+<Btn4Down>,<Btn4Up>:scroll-back(1,halfpage)\n\
+<Btn5Down>,<Btn5Up>:scroll-forw(1,halfpage)\n\
+
+!# In the scrollbar we map buttons 5 & 4 to 1 and 2 otherwise, core dump
+!# This will move proportionnaly to cursor position but we dont know how to
+!# program the same exact behavior as in the text widget.
+KTerm*VT100.Scrollbar.translations: #override\n\
+<Btn5Down>: StartScroll(Forward)\n\
+<Btn4Down>: StartScroll(Backward)\n\
+
+! selection characters with double click
+*charClass:        33:48,37:48,45-47:48,58:48,64:48,126-127:48
+
+!
+! Added for Debian
+!
+*VT100*KanjiMode: euc
+*VT100.Translations: #override ~Shift ~Ctrl ~Meta <Key>Delete: string("\033[3~")\n\
+                               ~Shift ~Ctrl ~Meta <Key>Home: string("\033[1~")\n\
+                               ~Shift ~Ctrl ~Meta <Key>End: string("\033[4~")\n\
+                               ~Shift ~Ctrl ~Meta <Key>BackSpace: string("\177")

@@ -1,0 +1,18 @@
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+# VAGRANT-BEGIN: a47bb787-6ed6-4324-9265-d6a97044706a
+/home/fred/src/services 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=111608d77f2909aa94d9cf3ca824bbc8)
+/home/fred/src/bundles 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=aac00c002ff56111862ebeb2f9ca928f)
+/home/fred/src/razor 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=807e5d3b04312de6fb671dfe53b8d7c6)
+/home/fred/src/nudge 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=50019f900e7ff9813cb50c15adb12ad7)
+/home/fred/src/eos 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=03af60c4aa3799c8bf6d48ccdde2ff06)
+/home/fred/src/typhoon 33.33.33.10(rw,no_subtree_check,all_squash,anonuid=1000,anongid=1000,fsid=6a9ab2f747e54b0686b72eac74c96274)
+# VAGRANT-END: a47bb787-6ed6-4324-9265-d6a97044706a

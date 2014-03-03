@@ -1,0 +1,2 @@
+# deb http://ppa.launchpad.net/tikhonov/misc/ubuntu precise main # disabled on upgrade to raring
+# deb-src http://ppa.launchpad.net/tikhonov/misc/ubuntu precise main # disabled on upgrade to raring

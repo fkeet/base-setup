@@ -1,0 +1,37 @@
+Section "Module"
+    Load           "glx"
+EndSection
+
+Section "ServerFlags"
+    Option         "Xinerama" "0"
+EndSection
+
+Section "Monitor"
+    Identifier     "Monitor0"
+EndSection
+
+Section "Device"
+    Identifier     "Device0"
+    Driver         "nvidia"
+    VendorName     "NVIDIA Corporation"
+    Option         "NoLogo" "False"
+EndSection
+
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    DefaultDepth    24
+    Option         "TwinView" "0"
+    Option         "FlatPanelProperties" "Scaling = Native"
+    Option         "SWCursor" "on"
+    Option         "HWCursor" "off"
+    SubSection     "Display"
+        Option         "DynamicTwinView" "false"
+        Depth          24
+    EndSubSection
+EndSection
+
+Section "Extensions"
+          Option "Composite" "Disable"
+EndSection

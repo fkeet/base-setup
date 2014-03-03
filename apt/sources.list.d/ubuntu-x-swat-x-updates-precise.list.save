@@ -1,0 +1,2 @@
+# deb http://ppa.launchpad.net/ubuntu-x-swat/x-updates/ubuntu precise main # disabled on upgrade to raring
+# deb-src http://ppa.launchpad.net/ubuntu-x-swat/x-updates/ubuntu precise main # disabled on upgrade to raring

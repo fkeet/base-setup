@@ -1,0 +1,19 @@
+[connection]
+id=Vodacom Default
+uuid=4726a077-484a-4b7a-8912-b365909cbc28
+type=gsm
+autoconnect=false
+
+[gsm]
+number=*99#
+apn=internet
+
+[ppp]
+lcp-echo-failure=5
+lcp-echo-interval=30
+
+[serial]
+baud=115200
+
+[ipv4]
+method=auto

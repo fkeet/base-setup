@@ -1,0 +1,15 @@
+[connection]
+id=HPE710n.5BB186
+uuid=688a92f5-aa51-4712-88b9-ede52c726aa7
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=HPE710n.5BB186
+mode=adhoc
+mac-address=8C:70:5A:92:90:E8
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

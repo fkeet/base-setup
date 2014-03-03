@@ -1,0 +1,2 @@
+# deb http://ppa.launchpad.net/gwendal-lebihan-dev/cinnamon-stable/ubuntu saucy main # disabled on upgrade to saucy
+# deb-src http://ppa.launchpad.net/gwendal-lebihan-dev/cinnamon-stable/ubuntu raring main

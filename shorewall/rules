@@ -1,0 +1,2 @@
+ACCEPT loc fw tcp 3128
+ACCEPT loc fw tcp 22

@@ -1,0 +1,155 @@
+#! /bin/sh
+#
+# dnsproxy initscript
+# Author: Patrick Schoenfeld <schoenfeld@in-medias-res.com>
+# Heavily based on /etc/init.d/skeleton
+#
+### BEGIN INIT INFO
+# Provides:          dnsproxy
+# Required-Start:    $remote_fs $syslog $named
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: starts dnsproxy
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/dnsproxy
+NAME=dnsproxy
+DESC=dnsproxy
+
+# Exit if the package is not installed
+[ -x $DAEMON ] || exit 0
+
+# Defaults for values from the defaults file
+RUN_DNSPROXY="false"
+ARGS="-d -c /etc/dnsproxy.conf"
+
+# Read the defaults file if available
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+# Load the VERBOSE setting and other rcS variables
+. /lib/init/vars.sh
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+
+start()
+{
+	start-stop-daemon --start --quiet --exec $DAEMON --test > /dev/null \
+		|| return 1
+	start-stop-daemon --start --quiet --exec $DAEMON -- \
+		$ARGS \
+		|| return 2
+}
+
+status()
+{
+	start-stop-daemon --start --quiet --exec $DAEMON --test > /dev/null
+	if [ "$?" = '0' ]; then
+		if [ "$RUN_DNSPROXY" = 'false' ]; then
+			return 2	# Daemon is disabled
+		else
+			return 1	# Daemon is not running
+		fi
+	else
+		return 0		# Daemon is running
+	fi
+}
+
+stop()
+{
+	status
+	case "$?" in
+		1|2)
+			return 1
+			;;
+		*)
+			start-stop-daemon --stop --quiet --retry=0/30/KILL/5 --exec $DAEMON
+
+			if [ "$?" = 2 ]; then
+				return 2
+			fi
+
+    		return "$?"
+			;;
+	esac
+}
+
+case "$1" in
+	start)
+	    log_daemon_msg "Starting $DESC" "$NAME"
+	    start
+	    case "$?" in
+	    	0)
+				log_end_msg 0
+				;;
+			1)
+				echo " is already running."
+				;;
+	        2)
+				log_end_msg 1
+				;;
+	    esac
+    	;;
+	stop)
+		log_daemon_msg "Stopping $DESC" "$NAME"
+	    stop
+		case "$?" in
+        	0)
+				log_end_msg 0
+				;;
+			1)
+				echo " is not running."
+				;;
+			2)
+				log_end_msg 1
+				;;
+		esac
+		;;
+	restart|force-reload)
+		log_daemon_msg "Restarting $DESC" "$NAME"
+		stop
+
+		case "$?" in
+			0|1)
+				start
+				case "$?" in
+					0)
+						log_end_msg 0
+						;;
+					1)
+						log_end_msg 1
+						;;
+					*)
+						log_end_msg 1
+						;;
+				esac
+				;;
+			*)
+				log_end_msg 1
+			;;
+		esac
+		;;
+	status)
+		log_daemon_msg "Status of $DESC"
+		echo -n " "
+		status
+		case "$?" in
+			0)
+				log_success_msg "$NAME is running."
+				;;
+			1)
+				log_success_msg "$NAME is not running."
+				;;
+			2)
+				log_success_msg "$NAME is disabled (see /etc/default/$NAME)."
+				;;
+		esac
+	;;
+	*)
+		echo "Usage: $0 {start|stop|status|restart|force-reload}" >&2
+		exit 3
+		;;
+esac

@@ -1,0 +1,2 @@
+# deb http://repo.steampowered.com/steam/ precise steam # disabled on upgrade to raring
+# deb-src http://repo.steampowered.com/steam/ precise steam # disabled on upgrade to raring

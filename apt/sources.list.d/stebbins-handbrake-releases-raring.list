@@ -1,0 +1,2 @@
+# deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu saucy main # disabled on upgrade to saucy
+# deb-src http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu raring main

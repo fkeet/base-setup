@@ -1,0 +1,18 @@
+127.0.0.1	localhost
+127.0.1.1	fred.pc fred
+174.129.197.251 m
+192.168.203.176 nas
+10.28.98.154    bootstrap
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+127.0.0.1 local-services.evite.com local-services.evitelabs.com
+127.0.0.1 local-typhoon.evite.com local-typhoon.evitelabs.com
+127.0.0.1 local.evite.com local.evitelabs.com
+127.0.0.1 local.postmarklabs.com local-postmark-payments.evitelabs.com
+192.168.203.233 raybuntu
